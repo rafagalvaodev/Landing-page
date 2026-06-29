@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de HTML, CSS e JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#inicio">Curso Web Básico</a>
+    <nav class="nav-menu" aria-label="Menu principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#localizacao">ViaCEP</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="tagline">Landing page simples</p>
+        <h1>Aprenda HTML, CSS e JavaScript</h1>
+        <p class="hero-text">
+          Uma página de inscrição para quem quer começar a estudar desenvolvimento web
+          de forma prática.
+        </p>
+        <button class="primary-button" id="ctaButton" type="button">Inscreva-se</button>
+        <p class="cta-message" id="ctaMessage" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="section-heading">
+        <p class="tagline">Sobre o projeto</p>
+        <h2>Sobre o curso</h2>
+      </div>
+      <div class="features">
+        <article>
+          <h3>HTML</h3>
+          <p>Estrutura básica de uma página web.</p>
+        </article>
+        <article>
+          <h3>CSS</h3>
+          <p>Cores, espaçamentos e organização visual.</p>
+        </article>
+        <article>
+          <h3>JavaScript</h3>
+          <p>Interações simples e consumo de API.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section forms-section" id="localizacao">
+      <div class="forms-grid">
+        <div class="form-column">
+          <div class="section-heading">
+            <p class="tagline">Consulta ViaCEP</p>
+            <h2>Buscar endereço</h2>
+          </div>
+
+          <form class="address-form" id="cepForm">
+            <label for="cep">CEP</label>
+            <div class="cep-row">
+              <input id="cep" name="cep" type="text" inputmode="numeric" maxlength="9" placeholder="Ex: 01001-000">
+              <button class="secondary-button" type="submit">Buscar</button>
+            </div>
+            <p class="form-feedback" id="cepFeedback" role="status" aria-live="polite"></p>
+
+            <div class="address-grid">
+              <label>
+                Logradouro
+                <input id="logradouro" type="text" readonly>
+              </label>
+              <label>
+                Bairro
+                <input id="bairro" type="text" readonly>
+              </label>
+              <label>
+                Cidade
+                <input id="cidade" type="text" readonly>
+              </label>
+              <label>
+                UF
+                <input id="uf" type="text" readonly>
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-column" id="contato">
+          <div class="section-heading">
+            <p class="tagline">Contato</p>
+            <h2>Fale com a gente</h2>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <label>
+              Nome
+              <input name="nome" type="text" placeholder="Seu nome" required>
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" placeholder="seu@email.com" required>
+            </label>
+            <label>
+              Mensagem
+              <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+            </label>
+            <button class="primary-button" type="submit">Enviar</button>
+            <p class="form-feedback" id="contactFeedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Curso Web Básico - Projeto de landing page.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
